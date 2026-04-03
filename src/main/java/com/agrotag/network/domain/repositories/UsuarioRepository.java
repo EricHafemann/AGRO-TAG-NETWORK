@@ -10,17 +10,11 @@ import java.util.Optional;
 public interface UsuarioRepository {
 
     Optional<Usuario> findById(Long id);
-    Usuario save(Usuario user);
+    Optional<Usuario> save(Usuario user);
     void deleteById(Long id);
     boolean existsById(Long id);
-
     List<Usuario> findAll();
-
-    void delete(Usuario user);
-
     Optional<Usuario> findByUsername(String username);
-
     boolean existsByUsername(String username);
-
     List<Usuario> findAllWithTaskCount();
 }
